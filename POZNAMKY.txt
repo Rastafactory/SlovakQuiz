@@ -1,0 +1,5 @@
+Kroky Spustania
+---------------
+>android studio, spustit emulator (AVD manager - android Studio)
+>react-native run-android
+>Ctrl+m + RELOAD (pri zmene)
