@@ -1,5 +1,37 @@
 Kroky Spustania
 ---------------
->android studio, spustit emulator (AVD manager - android Studio)
+
+1. EMULATOR (android)
+=====================
+
+Android studio -> spustit emulator (AVD manager - android Studio)
+Pripadne win. cmd 
+>cd C:\Android\sdk\tools
+>emulator -list-advs (nepovinne)
+>emulator -avd Nexus_5_API_24
+
+2.spustit automaticke buildenie (v inej command line)
+=====================================================
 >react-native run-android
 >Ctrl+m + RELOAD (pri zmene)
+
+
+DEBUG
+=====
+
+chrome
+>http://10.0.2.2:8081/debugger-ui
+
+
+
+
+MOJE POZNAMKY
+-------------
+redux - je data storage ale pozor je to runtime - cize po vypnuti sa maze
+state - je nieco ako globalna premenna a cez redux sa v nej drzia vsetky data kt. sa tam ulozili
+props - su nieco ako lokalne premenne v ramci jedneho objektu. Ak ich chceme nastavit zo statu treba ho connectnut a namapovat potrebne
+
+
+
+
+

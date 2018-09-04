@@ -1,5 +1,6 @@
-import {combineReducers} from 'redux';
+import { combineReducers } from 'redux';
+import AuthReducer from './AuthReducer';
 
-export default combineReducers( {
-    apple: () => []
+export default combineReducers({
+    auth: AuthReducer
 });

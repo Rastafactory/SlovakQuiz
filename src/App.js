@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
-import {Provider} from 'react-redux';
-import {createStore} from 'redux';
+import { View } from 'react-native';
+import { Provider } from 'react-redux';
+import { createStore, applyMiddleware } from 'redux';
 import firebase from 'firebase';
+import ReduxThunk from 'redux-thunk';
 import { Header, Button, Spinner } from './components/common';
 import LoginForm from './components/LoginForm';
 import reducers from './reducers'
@@ -22,12 +23,12 @@ class App extends Component {
     }
 
     render() {
+        const storeTo = createStore(reducers, {}, applyMiddleware(ReduxThunk));
         return (
-            <Provider store={createStore(reducers)}>
+            <Provider store={storeTo}>
                 <View >
-                    {/* <Header headerText="Authentication" /> */}
-                    <Text>SlovakQuiz</Text>
-                    {/* <LoginForm /> */}
+                    <Header headerText="Authentication" />
+                    <LoginForm pozdrav={{1:'ahoj', 2: 'cau'}}/>
                 </View>
             </Provider>
         );
