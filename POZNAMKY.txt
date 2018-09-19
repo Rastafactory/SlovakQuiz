@@ -1,6 +1,9 @@
 Kroky Spustania
 ---------------
 
+0.
+>yarn (package upratovac)
+
 1. EMULATOR (android)
 =====================
 

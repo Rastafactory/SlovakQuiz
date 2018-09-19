@@ -2,3 +2,4 @@ TODO:
 -----
 *   Nastudovat local storage kde sa bude ukladat refreshToken prihlaseneho usera
 *   Spravit to tak aby sa user z 1 zariadenia prihlasil len 1 krat a potom uz nemusi absolvat log in zasa
+*   Testovanie login sreeny
