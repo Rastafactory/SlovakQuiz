@@ -33,7 +33,7 @@ MOJE POZNAMKY
 redux - je data storage ale pozor je to runtime - cize po vypnuti sa maze
 state - je nieco ako globalna premenna a cez redux sa v nej drzia vsetky data kt. sa tam ulozili
 props - su nieco ako lokalne premenne v ramci jedneho objektu. Ak ich chceme nastavit zo statu treba ho connectnut a namapovat potrebne
-
+export default - sa importuje bez kuceravych zatvoriek 
 
 
 

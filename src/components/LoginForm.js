@@ -6,6 +6,10 @@ import { connect } from 'react-redux';
 
 class LoginForm extends Component {
 
+  static navigationOptions = {
+    header: null
+  }
+
   onEmailChange(text) {
     this.props.emailChanged(text);
   }
@@ -64,6 +68,11 @@ class LoginForm extends Component {
           {this.renderError()}
         <CardSection>
           {this.renderButton()}
+        </CardSection>
+        <CardSection>
+          <Button onPress={()=> this.props.navigation.navigate('Home')}>
+          Go To Menu
+          </Button>
         </CardSection>
       </Card>
     );

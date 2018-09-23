@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
-import { View } from 'react-native';
+// import { View } from 'react-native';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import firebase from 'firebase';
 import ReduxThunk from 'redux-thunk';
 import reducers from './reducers'
 import LoginForm from './components/LoginForm';
-// import Router from './Router'
+import MenuPage from './components/MenuPage';
+import {createStackNavigator} from 'react-navigation';
 
-class App extends Component {
+
+export default class App extends Component {
 
     componentWillMount() {
         // Initialize Firebase
@@ -26,12 +28,13 @@ class App extends Component {
         const storeTo = createStore(reducers, {}, applyMiddleware(ReduxThunk));
         return (
             <Provider store={storeTo}>
-                <View>
-                <LoginForm pozdrav={{ 1: 'ahoj', 2: 'cau' }} />
-                </View>
+                <AppStackNavigator />
             </Provider>
         );
     }
 }
 
-export default App;
+const AppStackNavigator = createStackNavigator({
+    Login: LoginForm,
+    Home: MenuPage
+});
